@@ -1,5 +1,5 @@
 # TalentNavigator_Backend
-The Backend Setup Azure Dev 
+# The Backend Setup Azure Dev 
 
  
 
@@ -37,7 +37,7 @@ python manage.py run_app (here the default env is already 'local')
 
  
 
-The Backend Setup (Local Standalone) 
+# The Backend Setup (Local Standalone) 
 
  
 
@@ -85,7 +85,7 @@ python manage.py run_app
 
  
 
-.env.local-standalone 
+# .env.local-standalone 
 
 SERVER_HOSTNAME=0.0.0.0 
 
@@ -136,7 +136,7 @@ DATABASE_URL=sqlite:///./database.db
 
  
 
-.env.local 
+# .env.local 
 
 AUTH_PROVIDER=azure_ad 
 
