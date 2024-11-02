@@ -1,0 +1,8 @@
+[flake8]
+ignore=
+    # line too long
+    E501,
+    #line break after binary operator
+    W504
+exclude = .venv,.git,__pycache__,docs,build,dist,.tox,.pytest_cache,versions,core/alembic
+

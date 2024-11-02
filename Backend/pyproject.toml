@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "portico-be-mono"
+version = "0.1.0"
+description = "Portico Backend Mono Repo"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+isort = "^5.13.2"
+black = "24.3.0"
+flake8 = "^7.1.0"
+pre-commit = "^3.7.1"
+requests = "^2.32.3"
+libs = { path = "./libs" }
+crews = { path = "./crews" }
+core = { path = "./core" }
+azure-keyvault-secrets = "^4.8.0"
+cffi = "1.17.0"
+filetype = "^1.2.0"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 100
+
+[tool.flake8]
+max-line-length = 100
+ignore = ['E501']
+exclude = ".venv,.git,__pycache__,docs,build,dist,.tox,.pytest_cache,versions,core/alembic"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
