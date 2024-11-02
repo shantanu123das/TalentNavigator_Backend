@@ -43,13 +43,13 @@
 
 1.Clone azurite repo 
 
-  Cd azurite folder or (npm install -g azurite)->)(azurite) 
-  
-  Npm install  
-  
-  npm config set strict-ssl false 
-  
-  Npm run start(npm run azurite 
+    cd azurite folder or (npm install -g azurite)->)(azurite) 
+    
+    Npm install  
+    
+    npm config set strict-ssl false 
+    
+    Npm run start(npm run azurite 
 
  
 
