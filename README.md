@@ -3,33 +3,33 @@
 
  
 
-cd into the project root folder 
+1.cd into the project root folder 
 
-python –m venv venv 
+2.python –m venv venv 
 
-Source venv/bin/activate or venv\Scripts\activate 
+3.Source venv/bin/activate or venv\Scripts\activate 
 
-pip install poetry 
+4.pip install poetry 
 
-poetry install  
+5.poetry install  
 
-az login 
+6.az login 
 
-Make sure core/.env.local is setup for the deployment you are testing (dev, qa, prod) 
+7.Make sure core/.env.local is setup for the deployment you are testing (dev, qa, prod) 
 
-DB Setup (One time only) 
+8.DB Setup (One time only) 
 
-cd core 
+    cd core 
+    
+    poetry run alembic upgrade head 
+    
+    Run init_db.py 
+    
+    Run init_roles.py 
+    
+    Run init_users.py 
 
-poetry run alembic upgrade head 
-
-Run init_db.py 
-
-Run init_roles.py 
-
-Run init_users.py 
-
-python manage.py run_app (here the default env is already 'local') 
+9.python manage.py run_app (here the default env is already 'local') 
 
  
 
@@ -41,45 +41,45 @@ python manage.py run_app (here the default env is already 'local')
 
  
 
-Clone azurite repo 
+1.Clone azurite repo 
 
-Cd azurite folder or (npm install -g azurite)->)(azurite) 
-
-Npm install  
-
-npm config set strict-ssl false 
-
-Npm run start(npm run azurite 
+  Cd azurite folder or (npm install -g azurite)->)(azurite) 
+  
+  Npm install  
+  
+  npm config set strict-ssl false 
+  
+  Npm run start(npm run azurite 
 
  
 
-cd into the project root folder 
+2.cd into the project root folder 
 
-python –m venv venv 
+3.python –m venv venv 
 
-Source venv/bin/activate or venv\Scripts\activate 
+4.Source venv/bin/activate or venv\Scripts\activate 
 
-pip install poetry 
+5.pip install poetry 
 
-poetry install  
+6.poetry install  
 
-Make sure core/.env.local-standalone is setup 
+7.Make sure core/.env.local-standalone is setup 
 
-Set ENV=local-standalone or export ENV=local-standalone 
+8.Set ENV=local-standalone or export ENV=local-standalone 
 
-DB Setup (One time only) 
+9.DB Setup (One time only) 
 
-cd core 
+    cd core 
+    
+    Delete database.db (if exists) 
+    
+    poetry run python core\db\init_db.py 
+    
+    poetry run python core\db\init_roles.py 
+    
+    poetry run python core\db\init_user_roles.py 
 
-Delete database.db (if exists) 
-
-poetry run python core\db\init_db.py 
-
-poetry run python core\db\init_roles.py 
-
-poetry run python core\db\init_user_roles.py 
-
-python manage.py run_app 
+10.python manage.py run_app 
 
  
 
